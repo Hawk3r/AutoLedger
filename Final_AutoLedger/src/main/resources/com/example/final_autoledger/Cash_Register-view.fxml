@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.final_autoledger.Cash_Register">
+    <children>
+        <VBox prefHeight="459.0" prefWidth="390.0">
+            <children>
+                <Pane prefHeight="66.0" prefWidth="300.0">
+                    <children>
+                        <Text layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Products">
+                     <font>
+                        <Font size="25.0" />
+                     </font></Text>
+                  <HBox layoutY="40.0" prefHeight="25.0" prefWidth="263.0" spacing="15.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Product Name                                        ">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Price">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                    </children>
+                </Pane>
+                <ScrollPane prefHeight="399.0" prefWidth="362.0">
+                    <content>
+                        <VBox fx:id="Left" prefHeight="398.0" prefWidth="382.0" spacing="2.0" />
+                    </content>
+                </ScrollPane>
+            </children>
+        </VBox>
+        <VBox prefHeight="459.0" prefWidth="370.0">
+            <children>
+                <Pane prefHeight="103.0" prefWidth="300.0">
+                    <children>
+                        <Text layoutX="33.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Text>
+                        <TextField fx:id="Number" layoutX="33.0" layoutY="74.0" prefHeight="30.0" />
+                        <Button fx:id="Quantity" layoutX="286.0" layoutY="74.0" mnemonicParsing="false" onAction="#Quantity" prefHeight="30.0" prefWidth="70.0" text="Enter" />
+                        <Text layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Selected: ">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Text>
+                        <Text fx:id="Product" layoutX="159.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Text>
+                    </children>
+                </Pane>
+                <Pane layoutX="10.0" layoutY="10.0" prefHeight="365.0" prefWidth="370.0">
+                    <children>
+                        <Text layoutX="14.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total:" />
+                        <Button fx:id="Cancel" layoutX="7.0" layoutY="288.0" mnemonicParsing="false" onAction="#cancelClick" prefHeight="30.0" prefWidth="90.0" text="Cancel Order" />
+                        <Button fx:id="Enter" layoutX="273.0" layoutY="288.0" mnemonicParsing="false" onAction="#Enter" prefHeight="30.0" prefWidth="90.0" text="Enter Order" />
+                        <Button fx:id="Exit" layoutX="7.0" layoutY="333.0" mnemonicParsing="false" onAction="#ExitClick" prefHeight="30.0" prefWidth="356.0" text="return">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Button>
+                        <ScrollPane layoutX="12.0" layoutY="56.0" prefHeight="188.0" prefWidth="347.0">
+                     <content>
+                        <VBox fx:id="Right" prefHeight="190.0" prefWidth="342.0" />
+                     </content>
+                        </ScrollPane>
+                  <HBox layoutX="12.0" layoutY="31.0" prefHeight="25.0" prefWidth="263.0" spacing="15.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name                         " />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity       " />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                     </children>
+                  </HBox>
+                  <Text fx:id="warning" fill="RED" layoutX="17.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text fx:id="Total" layoutX="290.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                    </children>
+                </Pane>
+            </children>
+        </VBox>
+    </children>
+</HBox>
